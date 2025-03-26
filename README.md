@@ -56,7 +56,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [✓] Commit: `Implement add function in Subscriber repository.`
     -   [✓] Commit: `Implement list_all function in Subscriber repository.`
     -   [✓] Commit: `Implement delete function in Subscriber repository.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
+    -   [✓] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
@@ -77,6 +77,13 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+
+Answers:
+1. We dont need to implement an interface inside BambangShop. The reasons are that the subscriber only observes the structure without any other subscribers with a diffrent implementation in the logic. The implementation of the subscriber itself is quite simple for now. Therefore, currently a single model struct is enough.
+
+2. As of now, we're using Dashmap which is sufficient and necessary rather than using Vec. By using Dashmap, it enables us to do insertions and deletions more efficient. This can be explain since the id and url can be stored as keys in a key-value structure. As for their values, it would be the Subscriber annd the Program objects. 
+
+3. Implementing a singleton pattern instead of DashMap wouldnt be enough to guarantee the safety for thread. Not guaranteing thread safety, makes it vulnerable when more than one threads try to modify the data. So by using DashMap, multiple threads are allowed to perfom operations  to the data altogether. In essence, DassMap is a thread safe data structure that we still need.
 
 #### Reflection Publisher-2
 
