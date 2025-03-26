@@ -1,5 +1,5 @@
 # BambangShop Publisher App
-Tutorial and Example for Advanced Programming 2024 - Faculty of Computer Science, Universitas Indonesia
+Tutorial and Example for Advanced Programming 2024 - Faculty of Computer Science, Universitas Indonesia.
 
 ---
 
