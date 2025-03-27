@@ -5,6 +5,7 @@ use bambangshop::{Result, compose_error_response};
 use crate::model::product::Product;
 use crate::repository::product::ProductRepository;
 use crate::service::notification::NotificationService;
+
 pub struct ProductService;
 
 impl ProductService {
@@ -41,6 +42,7 @@ impl ProductService {
         }
         let product: Product = product_opt.unwrap();
 
+        NotificationService.notify(&product.product_type, "DELETED", product.clone());
         return Ok(Json::from(product));
     }
 
