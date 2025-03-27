@@ -69,7 +69,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [✓] Commit: `Implement notify function in Notification service to notify each Subscriber.`
     -   [✓] Commit: `Implement publish function in Program service and Program controller.`
     -   [✓] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [✓] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -96,3 +96,11 @@ Answers:
 3. To make sure the behaviour in each endpoints works as intended, i used Postman. Postman allows me to test specific endpoints from the project. It creates HTTP requests to the server with GET, POST, DELETE and many more. By doing so, the responses to the request are abled to be viewed.
 
 #### Reflection Publisher-3
+
+Answers:
+
+1. We're using the Push model of the Observer Pattern. This means that when an event occurs like a product being created, deleted, or promoted then the NotificationService immediately pushes the relevant notification data to all subscribers linked to that product type.
+
+2. If we were to use the Pull model instead, the upside would be that subscribers could choose when to fetch the data they need and pick exactly what information they want. However, the downside is that each subscriber would have to actively handle retrieving the data themselves, which adds extra complexity and inconvenience.
+
+3. Not using multi-threading in the notification process would force notifications to be sent one at a time in a single-threaded manner. This approach can slow down the entire process because if one notification takes too long, it delays all subsequent ones. Additionally, this sequential handling increases the risk of overloading the server. This could potentially leads to timeouts or crashes.
