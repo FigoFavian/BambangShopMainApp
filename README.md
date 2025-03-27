@@ -58,7 +58,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [✓] Commit: `Implement delete function in Subscriber repository.`
     -   [✓] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
+    -   [✓] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
     -   [ ] Commit: `Implement subscribe function in Notification controller.`
     -   [ ] Commit: `Implement unsubscribe function in Notification service.`
@@ -86,5 +86,7 @@ Answers:
 3. Implementing a singleton pattern instead of DashMap wouldnt be enough to guarantee the safety for thread. Not guaranteing thread safety, makes it vulnerable when more than one threads try to modify the data. So by using DashMap, multiple threads are allowed to perfom operations  to the data altogether. In essence, DassMap is a thread safe data structure that we still need.
 
 #### Reflection Publisher-2
+
+
 
 #### Reflection Publisher-3
