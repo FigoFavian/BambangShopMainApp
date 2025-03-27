@@ -87,6 +87,12 @@ Answers:
 
 #### Reflection Publisher-2
 
+Answers:
 
+1. The reason why we need to seperate service and repository because both service and repository has diffrent functionality. This implementation follows the Single Responsibility Principle to improve maintainability and readability. Service handles the coordination of data operations by using the repository like the business logic. Meanwhile the Repository handles data that will be accessed and stored from the database itself. 
+
+2. Just using the model would make itself, the model, quite complex. Bugs and errors would be more frequent than ever since maintaining it will be harder. If repository and service didnt got seperated from model, then the model has to handle a lot of functionally that was supposed to be the responsibility of repository and service.
+
+3. To make sure the behaviour in each endpoints works as intended, i used Postman. Postman allows me to test specific endpoints from the project. It creates HTTP requests to the server with GET, POST, DELETE and many more. By doing so, the responses to the request are abled to be viewed.
 
 #### Reflection Publisher-3
